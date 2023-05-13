@@ -1,0 +1,31 @@
+import java.util.*;
+class bank {
+  int a,b;
+    bank(int a,int b) {
+       this.a = a;
+        this.b = b;
+     }
+    void print() {
+     System.out.println("example of this and super keyword"); 
+      System.out.println(this.a+this.b);
+  }
+ }
+class account extends bank {
+   int a,b,c;
+    account(int a,int b,int c) {
+          this.a = a;
+        this.b = b;
+         this.c = c;
+         }
+     public void print() {
+             super.print();
+          System.out.println(this.c);
+     }
+    }
+class superExample {
+  public static void main(String args[]) {
+     account n2 = new account(2,4,5);
+     bank n1 = new bank(2,3);
+        n2.print();
+       }
+  }
