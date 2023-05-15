@@ -1,0 +1,35 @@
+import java.util.*;
+class Person {
+String name;
+int age;
+}
+class Student extends Person {
+ int id;
+  void course() {
+  System.out.println(name+" currently studing java course");
+      }
+  void work() {
+   System.out.println("today goal to complete assignment");
+    }
+}
+class Professor extends Person {
+    int salary;
+     void teach() {
+       System.out.println("currently teaching java");
+        System.out.println("salary is:"+salary);
+           }
+     }
+class university_inheritance {
+  public static void main(String args[]) {
+    Person p1 = new Person();
+      Student p2 = new Student();
+        Professor p3 = new Professor();
+       Scanner s = new Scanner(System.in);
+        p2.name = s.nextLine();
+         p3.salary = s.nextInt();
+      p2.course();
+      p2.work();
+    p3.teach();
+      }
+ }
+        
