@@ -1,0 +1,45 @@
+import java.util.*;
+class thread1 extends Thread {
+  public void run() {
+      System.out.println("thread 1 is running");
+      Thread t1 = Thread.currentThread();
+      System.out.println(t1.getName());
+      Thread.yield();//  SUGGESTS SCHEDULAR THAT I HAVE NOTHING TO DO AT PERTICULAR
+      //TIME TO GIVE CPU TO OTHER THREAD TO EXECUTE
+       }
+ }
+class thread2 extends Thread {
+  public void run() {
+     try {
+        Thread.sleep(7000);// THREAD SLEEP FOR 7 SECONDS
+     }
+     catch(Exception e) {
+        e.printStackTrace();
+     }
+    System.out.println("thread 2 is running");
+        }
+     }
+class thread3 extends Thread {
+  public void run() {
+    System.out.println("thread 3 is running");
+    Thread.yield();
+        }
+     }
+class Multithreading {
+  public static void main(String argsd[]) throws InterruptedException {
+     thread1 t1 = new thread1();
+     thread2 t2 = new thread2();
+     thread3 t3 = new thread3();
+        t1.start();
+        t2.start();
+        t3.start();
+      Thread t = Thread.currentThread(); // REFERANCE TO CURRENTLY EXECUTING 
+      // THREAD OBJECT
+      t1.setPriority(10);  // SETS THREAD1 PRIORITY AS 10
+      t2.join();   // THE MAIN THREAD IS WAITING FOR EXECUTION OF THREAD2 
+      // AFTER EXECUTION OF THREAD2 MAIN THREAD WILL BE EXECUTED
+      System.out.println("current thread:"+t2.getName());
+      System.out.println("current thread:"+t3.getName());
+      System.out.println("thread priority:"+t1.getPriority());
+         }
+       }
