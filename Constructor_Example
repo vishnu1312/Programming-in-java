@@ -1,0 +1,29 @@
+class Person {
+    int age;
+    String name;
+    Person() {
+          age = 90;
+          name = "trv";
+          System.out.println("name:"+name);
+          System.out.println("age:"+age);
+    }
+    Person(int age,String name) {
+        this.age = age;
+        this.name = name;
+        System.out.println("name :"+name);
+        System.out.println("age:"+age);
+    }
+    Person(Person other) {
+        this.age = other.age;
+        this.name = other.name;
+        System.out.println("name:"+name);
+        System.out.println("age:"+age);
+    }
+}
+class Constructor_Example {
+    public static void main(String args[]) {
+      Person p1 = new Person();
+      Person p2 = new Person(87,"mavva");
+      Person p3 = new Person(p2);
+    }
+}    
