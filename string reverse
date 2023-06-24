@@ -1,0 +1,14 @@
+ import java.util.*;
+class string_reverse {
+  public static void main(String args[]) {
+     Scanner s = new Scanner(System.in);
+        String s1 = s.next();
+       String s2 = "";
+     char c;
+    for(int i=0;i<s1.length();i++) {
+           c = s1.charAt(i);
+            s2 = c + s2;
+       }
+        System.out.println(s2);
+         }
+ }
