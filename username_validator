@@ -1,0 +1,30 @@
+/*import java.util.*;
+class username_validator {
+      public static void main(String args[]) {
+          Scanner s = new Scanner(System.in);
+            String s1 = s.next();
+             String s2 = s.next();
+        if(s1.equals(s2)) {
+          System.out.println("valid");
+            }
+        else {
+           System.out.println("invalid");
+                }
+       }
+}*/
+
+import java.util.*;
+  class username_validator {
+   public static void main(String args[]) {
+       Scanner s = new Scanner(System.in); 
+        	String s1  =s.next();
+         String regularExpression = "^[a-zA-Z][a-zA-Z0-9#]{6,18}$";
+          if(s1.matches(regularExpression)) { 
+            System.out.println("valid");
+               }
+          else {
+            System.out.println("invalid");
+             }
+      }
+}
+            
